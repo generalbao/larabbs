@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
         \App\Models\Link::observe(\App\Observers\LinkObserver::class);
 
         \Carbon\Carbon::setLocale('zh');
+      \URL::forceScheme('https');
     }
 
     /**
